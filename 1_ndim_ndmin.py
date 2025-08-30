@@ -48,7 +48,9 @@ print(f.ndim)
 print(g.ndim)
 print(h.ndim)
 
-# create an array with 5 dimention and varify that its has 5 direction 
+# create an array with 5 dimention and
+#  varify that its has 5 direction  
 i=np.array([1,2,3,4,5],ndmin=5)
+
 print(i)
 print('number of dimention',i.ndim)
