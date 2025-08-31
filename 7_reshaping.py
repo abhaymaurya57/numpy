@@ -32,13 +32,13 @@ print(d)
 # return copy or view
 e=np.array([1,2,3,4,5,6,7,8])
 f=e.reshape(2,4).base
-print(f)
+print(f)    #[1 2 3 4 5 6 7 8]
 
 
 g=e.copy()
 g[0]=100
 h=g.reshape(4,2).base
-print(h)
+print(h)     #[100   2   3   4   5   6   7   8]
 
 # unknown dimention - you are only allow to have one
 # unknown dimention. pass -1
@@ -47,10 +47,16 @@ i= np.array([1,2,3,4,5,6,7,8,9,9,9,9,2,2,2,2])
 j=i.reshape(2,2,-1)
 print(j)
 
+'''[[[1 2 3 4]
+  [5 6 7 8]]
+
+ [[9 9 9 9]
+  [2 2 2 2]]]'''
+
 # flating the array by converting multidimentional array in 1-D
 k=np.array([[1,2,3],[4,5,6]])
 l=k.reshape(-1)
-print(l)
+print(l)   #[1 2 3 4 5 6]
 
 # there are alot of function for changing the shapes of an array in numpy.
 #like flatten , ravel and also rearrangeing the element rot90,flip,fliplr,flipud.
