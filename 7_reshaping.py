@@ -34,24 +34,34 @@ e=np.array([1,2,3,4,5,6,7,8])
 f=e.reshape(2,4).base
 print(f)    #[1 2 3 4 5 6 7 8]
 
-
+e=np.array([1,2,3,4,5,6,7,8])
 g=e.copy()
 g[0]=100
 h=g.reshape(4,2).base
-print(h)     #[100   2   3   4   5   6   7   8]
+print(e)     #  [1 2 3 4 5 6 7 8]
+print(g)     #  [100   2   3   4   5   6   7   8]
+print(h)     #  [100   2   3   4   5   6   7   8]
+
+e=np.array([1,2,3,4,5,6,7,8])
+g=e.view()
+g[0]=100
+h=g.reshape(4,2).base
+print(h)  # [100   2   3   4   5   6   7   8]
+print(g)  #  [100   2    3   4   5   6   7   8]
+print(e)  #[100   2   3   4   5   6   7   8]
 
 # unknown dimention - you are only allow to have one
 # unknown dimention. pass -1
 
-i= np.array([1,2,3,4,5,6,7,8,9,9,9,9,2,2,2,2])
+i= np.array([1,2,3,4,5,6,7,8,9,10,11,12])
 j=i.reshape(2,2,-1)
 print(j)
 
-'''[[[1 2 3 4]
-  [5 6 7 8]]
+'''[[[ 1  2  3]
+  [ 4  5  6]]
 
- [[9 9 9 9]
-  [2 2 2 2]]]'''
+ [[ 7  8  9]
+  [10 11 12]]]'''
 
 # flating the array by converting multidimentional array in 1-D
 k=np.array([[1,2,3],[4,5,6]])
