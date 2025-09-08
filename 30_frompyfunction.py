@@ -11,4 +11,20 @@ def myadd(x,y):
 
 myadd = np.frompyfunc(myadd,2,1)  # 2 array, output 1
 print(myadd([1,2,3,4],[5,6,7,8]))
- 
+
+# cheking if  this function in ufunc or net:
+
+print(type(np.add))
+
+# concatenate()
+print(type(np.concatenate))
+
+#what if ufunc does not exist:
+
+'''  print(type(np.kuxx_bhi))  '''  # error nahi show karta hai par execute time pe error dega
+
+# use an if statment check if the function a ufunc or not
+if type(np.add)==np.ufunc:
+    print('yes this function is u function')
+else:
+    print('this function is not ufunc ')
